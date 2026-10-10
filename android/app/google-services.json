@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "514132942516",
+    "firebase_url": "https://party-zone-1-default-rtdb.firebaseio.com",
+    "project_id": "party-zone-1",
+    "storage_bucket": "party-zone-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514132942516:android:035bd52d7b2777ea1001e1",
+        "android_client_info": {
+          "package_name": "com.partyzone.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTkk-gePmoKpbCKQvyCdt4M3G_I1moIk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
