@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -43,6 +44,20 @@ jobs:
 
       - name: Build APK
         run: flutter build apk --release
+
+      - name: Print Android SHA-1
+        shell: bash
+        run: |
+          if [ -f "$HOME/.android/debug.keystore" ]; then
+            keytool -list -v \
+              -keystore "$HOME/.android/debug.keystore" \
+              -alias androiddebugkey \
+              -storepass android \
+              -keypass android | grep -E 'SHA1:|SHA-1:'
+          else
+            echo "Debug keystore not found"
+            exit 1
+          fi
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
